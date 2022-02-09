@@ -22,7 +22,7 @@ export default function Sidebar() {
                         </li>
                         <li>
                             <NavLink to='/create'>
-                                <span>New Lesson</span>
+                                <span>Create New Lesson</span>
                             </NavLink>
                         </li>
                     </ul>

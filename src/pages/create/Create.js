@@ -76,14 +76,15 @@ export default function Create() {
            />
         </label>
         <label>
-          <span>Word 2:</span>
+          Word 2:
           <input 
           required
           type="text"
           onChange={(e) => setWord2(e.target.value)}
           value={word2}
            />
-        </label>
+           </label>
+        
         <label>
           <span>Word 3:</span>
           <input 
