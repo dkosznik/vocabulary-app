@@ -7,7 +7,7 @@ import { useAuthContext } from '../../hooks/useAuthContext';
 import { useFirestore } from '../../hooks/useFirestore';
 import { useNavigate } from 'react-router-dom';
 
-export default function Create() {
+export default function Create({uid}) {
   // form field values
   const [word1, setWord1] = useState('')
   const [word2, setWord2] = useState('')
@@ -32,7 +32,8 @@ export default function Create() {
     e.preventDefault()
     setFormError(null)
 
-    const project = {
+    const lesson = {
+      uid:user.uid,
       word1,
       word2,
       word3,
@@ -44,7 +45,7 @@ export default function Create() {
       word9,
       word10
       }
-    await addDocument(project)
+    await addDocument(lesson)
     if (!response.error) {
       navigate('/')
     }
