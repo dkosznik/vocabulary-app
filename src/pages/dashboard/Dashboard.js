@@ -1,9 +1,7 @@
 import './Dashboard.css'
 import { useCollection } from '../../hooks/useCollection';
-import { useState} from 'react'
 import { useAuthContext } from '../../hooks/useAuthContext';
 import LessonList from '../../components/LessonList';
-import Create from '../create/Create';
 
 
 export default function Dashboard() {
@@ -21,7 +19,6 @@ export default function Dashboard() {
       <h2 className="page-title">Dashboard</h2>
       {error && <p className='errpr'>{error}</p>}
       {documents && <LessonList lessons={lessons}/>}
-      <Create uid={user.uid}/>
     </div>
   )
 }

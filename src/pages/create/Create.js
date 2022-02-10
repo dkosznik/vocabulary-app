@@ -51,15 +51,15 @@ export default function Create({uid}) {
     }
   }
 
-  useEffect(() => {
-    if (documents) {
-      const options = documents.map(user => {
-        return { value: user, label: user.displayName}
-      })
-      setUsers(options)
-    } 
+  // useEffect(() => {
+  //   if (documents) {
+  //     const options = documents.map(user => {
+  //       return { value: user, label: user.displayName}
+  //     })
+  //     setUsers(options)
+  //   } 
     
-  },[documents])
+  // },[documents])
 
   return (
     <div>
