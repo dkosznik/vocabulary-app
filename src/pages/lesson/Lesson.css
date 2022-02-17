@@ -1,0 +1,19 @@
+.words {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}
+.disabled{
+    /* visibility: hidden; */
+    width: 250px;
+}
+.speechButton {
+    width: 50px;
+    height: 5px;
+    color: blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    
+}

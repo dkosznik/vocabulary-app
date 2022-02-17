@@ -1,3 +1,16 @@
 .create-form {
-    max-width: 600px;
+    float: none; /* if you had floats before? otherwise inline-block will behave differently */
+    display: inline-block;
+    vertical-align: middle; 
+    
 }
+.create-form label {
+    margin: 5px 10px 5px 0;
+  }
+.create-form input {
+    
+    margin: 5px 10px 5px 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+  }

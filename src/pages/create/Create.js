@@ -6,6 +6,10 @@ import { timestamp } from '../../firebase/config';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import { useFirestore } from '../../hooks/useFirestore';
 import { useNavigate } from 'react-router-dom';
+import Input from '@mui/material/Input';
+
+const ariaLabel = { 'aria-label': 'description' };
+
 
 export default function Create({uid}) {
   // form field values
@@ -63,101 +67,75 @@ export default function Create({uid}) {
 
   return (
     <div>
-      <div className="create-form">
+      <div >
         <h2 className="page-title">Create a list of words</h2>
       
-      <form onSubmit={handleSubmit}>
-        <label>
-          <span>Word 1:</span>
-          <input 
-          required
-          type="text"
-          onChange={(e) => setWord1(e.target.value)}
-          value={word1}
-           />
-        </label>
-        <label>
-          Word 2:
-          <input 
-          required
-          type="text"
-          onChange={(e) => setWord2(e.target.value)}
-          value={word2}
-           />
-           </label>
-        
-        <label>
-          <span>Word 3:</span>
-          <input 
-          required
-          type="text"
-          onChange={(e) => setWord3(e.target.value)}
-          value={word3}
-           />
-        </label>
-        <label>
-          <span>Word 4:</span>
-          <input 
-          required
-          type="text"
-          onChange={(e) => setWord4(e.target.value)}
-          value={word4}
-           />
-        </label>
-        <label>
-          <span>Word 5:</span>
-          <input 
-          required
-          type="text"
-          onChange={(e) => setWord5(e.target.value)}
-          value={word5}
-           />
-        </label>
-        <label>
-          <span>Word 6:</span>
-          <input 
-          required
-          type="text"
-          onChange={(e) => setWord6(e.target.value)}
-          value={word6}
-           />
-        </label>
-        <label>
-          <span>Word 7:</span>
-          <input 
-          required
-          type="text"
-          onChange={(e) => setWord7(e.target.value)}
-          value={word7}
-           />
-        </label>
-        <label>
-          <span>Word 8:</span>
-          <input 
-          required
-          type="text"
-          onChange={(e) => setWord8(e.target.value)}
-          value={word8}
-           />
-        </label>
-        <label>
-          <span>Word 9:</span>
-          <input 
-          required
-          type="text"
-          onChange={(e) => setWord9(e.target.value)}
-          value={word9}
-           />
-        </label>
-        <label>
-          <span>Word 10:</span>
-          <input 
-          required
-          type="text"
-          onChange={(e) => setWord10(e.target.value)}
-          value={word10}
-           />
-        </label>
+      <form onSubmit={handleSubmit} >
+
+      <div className="create-form">
+      
+      <Input placeholder="First word" inputProps={ariaLabel} 
+                required
+                type="text"
+                onChange={(e) => setWord1(e.target.value)}
+                value={word1}
+      />
+      <Input placeholder="Second word" inputProps={ariaLabel} 
+                required
+                type="text"
+                onChange={(e) => setWord2(e.target.value)}
+                value={word2}
+      />
+      <Input placeholder="Third word" inputProps={ariaLabel} 
+                required
+                type="text"
+                onChange={(e) => setWord3(e.target.value)}
+                value={word3}
+      />
+      <Input placeholder="Fourth word" inputProps={ariaLabel} 
+                required
+                type="text"
+                onChange={(e) => setWord4(e.target.value)}
+                value={word4}
+      />
+      <Input placeholder="Fifth word" inputProps={ariaLabel} 
+                required
+                type="text"
+                onChange={(e) => setWord5(e.target.value)}
+                value={word5}
+      />
+      <Input placeholder="Sixth word" inputProps={ariaLabel} 
+                required
+                type="text"
+                onChange={(e) => setWord6(e.target.value)}
+                value={word6}
+      />
+      <Input placeholder="Seventh word" inputProps={ariaLabel} 
+                required
+                type="text"
+                onChange={(e) => setWord7(e.target.value)}
+                value={word7}
+      />
+      <Input placeholder="Eighth word" inputProps={ariaLabel} 
+                required
+                type="text"
+                onChange={(e) => setWord8(e.target.value)}
+                value={word8}
+      />
+      <Input placeholder="Ninth word" inputProps={ariaLabel} 
+                required
+                type="text"
+                onChange={(e) => setWord9(e.target.value)}
+                value={word9}
+      />
+      <Input placeholder="Tenth word" inputProps={ariaLabel} 
+                required
+                type="text"
+                onChange={(e) => setWord10(e.target.value)}
+                value={word10}
+      />
+      </div>
+       
         <button className="btn">Add all words</button>
 
         {formError && <p className='error'>{formError}</p>}
